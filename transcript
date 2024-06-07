@@ -1,0 +1,62 @@
+# Compile of testfixture.v was successful.
+# Compile of MPQ.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.test
+# vsim -gui work.test 
+# Start time: 09:22:12 on Jun 03,2024
+# Loading work.test
+# Loading work.MPQ
+# Loading work.RAM
+add wave -position insertpoint  \
+sim:/test/data_mem \
+sim:/test/expect_mem \
+sim:/test/cmd_mem \
+sim:/test/index_mem \
+sim:/test/value_mem \
+sim:/test/clk \
+sim:/test/rst \
+sim:/test/data_valid \
+sim:/test/data \
+sim:/test/cmd_valid \
+sim:/test/cmd \
+sim:/test/index \
+sim:/test/value \
+sim:/test/busy \
+sim:/test/RAM_valid \
+sim:/test/RAM_A \
+sim:/test/RAM_D \
+sim:/test/done \
+sim:/test/cycle \
+sim:/test/k \
+sim:/test/over \
+sim:/test/err \
+sim:/test/data_num \
+sim:/test/cmd_num
+vlog testfixture.v +define+P3
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:23:16 on Jun 03,2024
+# vlog -reportprogress 300 testfixture.v "+define+P3" 
+# -- Compiling module test
+# -- Compiling module RAM
+# 
+# Top level modules:
+# 	test
+# End time: 09:23:16 on Jun 03,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+run -all
+#  ****************************               
+#  **                        **               
+#  **  Congratulations !!    **               
+#  **                        **       |__||  
+#  **  Simulation PASS !!    **      / O.O  | 
+#  **                        **    /_____   | 
+#  **  Your score =100       **   /^ ^ ^ \  |
+#  **                        **  |^ ^ ^ ^ |w| 
+#  ****************************   \m___m__|_|
+# ** Note: $finish    : E:/FPGA/NCKU/DIC/HW4/testfixture.v(157)
+#    Time: 4422500 ps  Iteration: 0  Instance: /test
+# 1
+# Break in Module test at E:/FPGA/NCKU/DIC/HW4/testfixture.v line 157
+quit -sim
+# End time: 10:17:56 on Jun 03,2024, Elapsed time: 0:55:44
+# Errors: 0, Warnings: 4
